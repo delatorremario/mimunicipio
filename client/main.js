@@ -1,18 +1,8 @@
+(function($){
+    $(function(){
 
-Template.hello.onCreated(function helloOnCreated() {
-  // counter starts at 0
-  this.counter = new ReactiveVar(0);
-});
+        $('.button-collapse').sideNav();
+        $('.parallax').parallax();
 
-Template.hello.helpers({
-  counter:function() {
-    return Template.instance().counter.get();
-  },
-});
-
-Template.hello.events({
-  'click button':function(event, instance) {
-    // increment the counter when button is clicked
-    instance.counter.set(instance.counter.get() + 1);
-  },
-});
+    }); // end of document ready
+})(jQuery); // end of jQuery name space
